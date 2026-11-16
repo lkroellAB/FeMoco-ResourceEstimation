@@ -1,0 +1,27 @@
+# pixi environments -- reproduced from pixi.lock, never committed.
+# pixi.lock itself IS committed, so the environment stays reproducible.
+.pixi/
+
+# Script output -- regenerate with `pixi run tables` / `pixi run figures`
+generated_tables/
+figs/
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# Test / tooling caches
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Editor and OS clutter
+.claude/
+.vscode/
+.idea/
+.DS_Store
+
+# Paper drafts, kept locally (the paper is on arXiv)
+paper/
+
+# Low et al.'s Table XXVII, transcribed locally (not ours to publish; see scripts/lambda_scan.py)
+scripts/low26_frontier.py

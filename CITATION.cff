@@ -1,0 +1,41 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper below."
+type: software
+title: "FeMoco Resource Estimation"
+abstract: "Resource estimates for ground-state energy estimation of FeMoco (FeMoco-54 and FeMoco-76) on cat qubits, in the repetition-cat and the hybrid LDPC-cat architectures."
+authors:
+  - given-names: Larissa
+    family-names: Kroell
+version: arxiv-v2
+date-released: 2026-11-16
+preferred-citation:
+  type: article
+  title: "Ground-state energy estimation compiled on cat qubits: 6 808 qubits for FeMoco-54 in 23.6 hours"
+  authors:
+    - given-names: Larissa
+      family-names: Kroell
+    - given-names: Hugo
+      family-names: Jacinto
+    - given-names: Victor
+      family-names: Hertz
+    - given-names: Axel
+      family-names: Pappalardo
+    - given-names: Adel
+      family-names: Ben Moussa
+    - given-names: Manuel
+      family-names: Rispler
+    - given-names: Peter
+      family-names: Shanahan
+    - given-names: Élie
+      family-names: Gouzien
+    - given-names: Christophe
+      family-names: Vuillot
+    - given-names: Vivien
+      family-names: Londe
+  year: 2026
+  journal: "arXiv preprint"
+  identifiers:
+    - type: other
+      value: "arXiv:2610.37840"
+  doi: "10.48550/arXiv.2610.37840"
+  url: "https://arxiv.org/abs/2610.37840"

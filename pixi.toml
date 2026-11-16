@@ -1,0 +1,46 @@
+[workspace]
+authors = ["Larissa Kroell"]
+channels = ["conda-forge"]
+name = "femoco-resource-estimation"
+platforms = ["osx-arm64", "linux-64", "linux-aarch64"]
+version = "0.1.0"
+
+[tasks]
+test = "pytest"
+
+# the paper's LaTeX tables, into generated_tables/ (not committed)
+[tasks.tables]
+description = "Write the paper's LaTeX tables into generated_tables/"
+cmd = """\
+mkdir -p generated_tables \
+&& python scripts/error_accounting_latex.py rep generated_tables/error_accounting_rep.tex \
+&& python scripts/error_accounting_latex.py ldpc generated_tables/error_accounting_ldpc.tex \
+&& python scripts/volume_latex.py rep generated_tables/volume_rep.tex \
+&& python scripts/volume_latex.py ldpc generated_tables/volume_ldpc.tex \
+&& python scripts/be_breakdown_latex.py rep 5e-4 generated_tables/be_breakdown_rep_5e-4.tex \
+&& python scripts/be_breakdown_latex.py ldpc 5e-4 generated_tables/be_breakdown_ldpc_5e-4.tex \
+&& python scripts/cross_options_latex.py generated_tables/cross_options.tex"""
+
+# the figures and the scans behind them, into figs/ (not committed)
+[tasks.figures]
+description = "Scan both noise levels (a few minutes each) and write the figures into figs/"
+cmd = """\
+python scripts/lambda_scan.py figures figs \
+&& python scripts/rprep_rot_tradeoff.py figs"""
+
+[tasks.replot]
+description = "Redraw the figures from the scans already in figs/, without scanning"
+cmd = """\
+python scripts/lambda_scan.py replot figs \
+&& python scripts/rprep_rot_tradeoff.py figs"""
+
+[activation.env]
+PYTHONPATH = "$PIXI_PROJECT_ROOT"
+
+[dependencies]
+numpy = ">=2.5.2,<3"
+matplotlib-base = ">=3.11.1,<4"
+ipykernel = "<7"
+pip = ">=26.2.1,<27"
+jupyter_client = ">=8.10.0,<9"
+pytest = ">=9.1.1,<10"
