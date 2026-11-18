@@ -7,7 +7,7 @@ It does this for two architectures: the repetition-cat architecture and the hybr
 It produces the numbers, tables and figures of:
 
 > *Ground-state energy estimation compiled on cat qubits: 6 808 qubits for FeMoco-54 in 23.6 hours*,
-> [arXiv:2610.37840](https://arxiv.org/abs/2610.37840) (v2, 2026-11-16; v1, 2026-10-27).
+> [arXiv:2610.37840](https://arxiv.org/abs/2610.37840) (v2, 2026-11-18; v1, 2026-10-27).
 
 ## Setup
 
