@@ -7,7 +7,8 @@ authors:
   - given-names: Larissa
     family-names: Kroell
 version: arxiv-v2
-date-released: 2026-11-16
+date-released: 2026-11-18
+license: Apache-2.0
 preferred-citation:
   type: article
   title: "Ground-state energy estimation compiled on cat qubits: 6 808 qubits for FeMoco-54 in 23.6 hours"
